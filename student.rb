@@ -1,18 +1,15 @@
 require_relative'high_give_module.rb'
 
 require_relative'school'
+
 class Student < School
   include Highfive
 
 
   def initialize(options = {})
     @phase = 1
-    
   end
-# def offer_high_five
-#     "High five!"
-#   end
-  
+
 
   def set_phase(num)
     response = ""

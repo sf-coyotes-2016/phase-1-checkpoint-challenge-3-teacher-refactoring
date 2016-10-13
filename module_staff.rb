@@ -12,7 +12,7 @@ module Staff
   end
   def set_performance_rating(rating)
     response = ""
-    if rating > 80
+    if rating > self.class::RATING
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else
