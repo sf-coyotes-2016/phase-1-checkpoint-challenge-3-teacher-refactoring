@@ -1,3 +1,4 @@
+require_relative'../school'
 require_relative '../senior_teacher'
 
 describe SeniorTeacher do
