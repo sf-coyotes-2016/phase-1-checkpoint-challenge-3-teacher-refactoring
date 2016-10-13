@@ -4,5 +4,16 @@ module HighFiveable
   end
 end
 
-class Teacher
+module Payable
+end
+
+class Human
+  attr_accessor :name
+  attr_reader :age
+
+  def initialize(options={})
+    @age = options.fetch(:age, 0)
+    @name = options.fetch(:name, "")
+  end
+
 end

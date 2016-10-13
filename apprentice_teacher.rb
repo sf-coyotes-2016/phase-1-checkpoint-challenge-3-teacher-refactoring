@@ -1,16 +1,14 @@
 require_relative 'human'
 
-class ApprenticeTeacher
+class ApprenticeTeacher < Human
   include HighFiveable
 
   RATING = 80
 
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :phase, :target_raise
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @target_raise = 800
     @phase = 3
   end
