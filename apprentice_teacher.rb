@@ -1,9 +1,6 @@
 require_relative 'educator'
 class ApprenticeTeacher < Educator
-  attr_reader :age, :phase, :target_raise
-  attr_accessor :name
   RATING_THRESHOLD_FOR_RAISE = 80
-
 
   def initialize(options={})
     super
