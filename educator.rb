@@ -3,8 +3,8 @@ require_relative 'person'
 
 class Educator < Person
   include HighFivable
-  attr_reader :age, :phase, :salary, :TARGET_RAISE
-  attr_accessor :name
+  attr_reader :phase, :salary, :target_raise
+
   def initialize(options={})
     super
     @phase = 3
@@ -28,7 +28,7 @@ class Educator < Person
     response = ""
     if rating > self.class::RATING_THRESHOLD_FOR_RAISE
       response = "Yay, I'm a great employee!"
-      receive_raise(self.target_raise)
+      receive_raise(@target_raise)
     else
       response += "Oh, well -- thanks to this actionable, specific, and kind "
       response += "feedback, I'll do better next time."
