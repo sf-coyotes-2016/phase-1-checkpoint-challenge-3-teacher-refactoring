@@ -1,3 +1,5 @@
+require_relative '../human'
+
 require_relative '../senior_teacher'
 
 describe SeniorTeacher do
