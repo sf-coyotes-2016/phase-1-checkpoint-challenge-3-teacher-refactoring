@@ -9,7 +9,6 @@ class Student < Human
     @phase = 1
   end
 
-
   def set_phase(num)
     response = ""
     if num == @phase
