@@ -15,9 +15,9 @@ class Teacher < Person
 
 	def teach_stuff
 	    response = ""
-	    response += self.class::LISTEN
-	    response += self.class::KNOWLEDGE
-	    response += self.class::WELCOME
+	    response += "Listen, class, this is how everything works#{self.class::LISTEN}"
+	    response += "*drops #{self.class::KNOWLEDGE} knowledge bomb* "
+	    response += "... You're welcome.#{self.class::WELCOME}"
 	    response
  	end	
 
@@ -30,4 +30,15 @@ class Teacher < Person
 		@salary += raise
 	end
 
+	def set_performance_rating(rating)
+	    response = ""
+	    if rating > self.class::RATING
+	      response = "Yay, I'm a great employee!"
+	      receive_raise(@target_raise)
+	    else
+	      response += "Oh, well -- thanks to this actionable, specific, and kind "
+	      response += "feedback, I'll do better next time."
+	    end
+	    response
+	  end
 end
