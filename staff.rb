@@ -1,13 +1,16 @@
-class Staff
+require_relative 'school'
 
-	attr_reader :phase
+class Staff < School
 
-	def initialize(options={})
-    @phase = 3
-    # @age = options.fetch(:age, 0)
-    # @name = options.fetch(:name, "")
-    # @target_raise = 1000
-  end
+	# attr_reader :phase
+
+	# def initialize(options={})
+	# 	super
+    
+ #    # @age = options.fetch(:age, 0)
+ #    # @name = options.fetch(:name, "")
+ #    # @target_raise = 1000
+ #  end
 
 	def set_phase(num)
     @phase = num
