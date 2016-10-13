@@ -1,15 +1,24 @@
-require_relative 'teacher'
+class Teacher
+  attr_reader :age, :salary, :phase, :target_raise, :raise
+  attr_accessor :name 
 
-class ApprenticeTeacher < Teacher
-
-  attr_reader :raise, :rating
-
-
+  include Person
+  
   def initialize(options={})
-    super
     @phase = 3
-    @rating = 80
+    @age = options.fetch(:age, 0)
+    @name = options.fetch(:name, "")
+    @target_raise = 1000
+  end
 
+ 
+
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works. "
+    response += "*drops crazy knowledge bomb* "
+    response += "... You're welcome."
+    response
   end
 
   def salary=(new_salary)
@@ -19,6 +28,11 @@ class ApprenticeTeacher < Teacher
 
   def receive_raise(raise)
     @salary += raise
+  end
+
+  def set_phase(num)
+    @phase = num
+    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def set_performance_rating(rating)
@@ -31,9 +45,5 @@ class ApprenticeTeacher < Teacher
       response += "feedback, I'll do better next time."
     end
     response
-  end
-
-  def attend_training_session
-    puts "Whoa. I know ruby-fu"
   end
 end
