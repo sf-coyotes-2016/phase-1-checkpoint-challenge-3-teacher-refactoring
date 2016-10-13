@@ -53,6 +53,7 @@ describe ApprenticeTeacher do
       expect(response).to eq("Listen, class, this is how everything works. *drops crazy knowledge bomb* ... You're welcome.")
     end
   end
+  
 
   describe "salary functionality" do
     it "has a readable target raise of 800" do
