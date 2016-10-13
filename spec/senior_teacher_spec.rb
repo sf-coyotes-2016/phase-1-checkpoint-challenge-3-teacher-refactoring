@@ -2,7 +2,7 @@ require_relative '../senior_teacher'
 
 describe SeniorTeacher do
   let(:jan) { SeniorTeacher.new({name: "Jan", age: 35}) }
-  let(:default_teacher) { SeniorTeacher.new }
+  let(:default_teacher) { SeniorTeacher.new( {name: ''})}
 
   it "offers high fives" do
     expect(jan.offer_high_five).to eq("High five!")
