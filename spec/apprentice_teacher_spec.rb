@@ -1,3 +1,5 @@
+require_relative '../human'
+
 require_relative '../apprentice_teacher'
 
 describe ApprenticeTeacher do

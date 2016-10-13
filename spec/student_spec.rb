@@ -1,3 +1,4 @@
+require_relative '../human'
 require_relative '../student'
 
 describe Student do
