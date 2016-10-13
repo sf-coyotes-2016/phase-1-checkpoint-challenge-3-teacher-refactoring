@@ -3,7 +3,10 @@
 Edit this file to answer the following questions. Give examples. You may need to do a bit of research. :)
 
 1. Why is Hash.fetch useful?
-It allows you to set a default value
+It allows you to set a default value.
+##What is the difference in behavior of args[:key] vs args.fetch(:key) when :key is not present in the hash?
+
+  The difference is args[:key] returns nil when :key is not present in the hash. In contrast, args.fetch(:key) will throw a KeyError if :key is not present and a default value is not supplied.
 
 2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
 
