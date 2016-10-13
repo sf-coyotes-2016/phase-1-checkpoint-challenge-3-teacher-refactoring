@@ -1,4 +1,6 @@
-class SeniorTeacher
+require_relative 'staff'
+
+class SeniorTeacher < Staff
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
@@ -9,14 +11,16 @@ class SeniorTeacher
     @target_raise = 1000
   end
 
+  RATING = 90
+
   def offer_high_five
     "High five!"
   end
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
+  # end
 
   def teach_stuff
     response = ""
@@ -26,26 +30,26 @@ class SeniorTeacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
+  # def salary=(new_salary)
+  #   puts "This better be good!"
+  #   @salary = new_salary
+  # end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
+  # def receive_raise(raise)
+  #   @salary += raise
+  # end
 
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 90
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
-  end
+  # def set_performance_rating(rating)
+  #   response = ""
+  #   if rating > 90
+  #     response = "Yay, I'm a great employee!"
+  #     receive_raise(@target_raise)
+  #   else
+  #     response += "Oh, well -- thanks to this actionable, specific, and kind "
+  #     response += "feedback, I'll do better next time."
+  #   end
+  #   response
+  # end
 
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
