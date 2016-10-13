@@ -7,6 +7,7 @@ class ApprenticeTeacher < School
 include Highfive
 include Staff
 RATING = 80
+
   def initialize(options={})
    super
     
