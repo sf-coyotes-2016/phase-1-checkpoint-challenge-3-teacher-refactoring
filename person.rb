@@ -4,7 +4,7 @@ class Person
 
 	def initialize(options={})
 		@age = options.fetch(:age, 0)
-		@name = options.fetch(:name, "")
+		@name = options.fetch(:name, '')
 		@phase = self.class::PHASE
 	end
 end

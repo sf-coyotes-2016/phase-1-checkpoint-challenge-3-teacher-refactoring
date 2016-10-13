@@ -1,8 +1,7 @@
 require_relative 'person'
-  PHASE = 1
-
 
 class Student < Person
+  PHASE = 1
 
   def offer_high_five
     "High five!"
