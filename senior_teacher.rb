@@ -6,6 +6,7 @@ class SeniorTeacher < School
   # attr_accessor :name
  include Highfive
  include Staff
+ RATING = 90
   def initialize(options={})
     super
     @phase = 3
