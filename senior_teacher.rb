@@ -1,7 +1,7 @@
 require_relative 'staff'
 
 class SeniorTeacher < Staff
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  attr_reader :age, :salary, :performance_rating, :target_raise
   attr_accessor :name
 
   def initialize(options={})
