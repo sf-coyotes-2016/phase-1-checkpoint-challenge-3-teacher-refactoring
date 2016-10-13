@@ -38,5 +38,4 @@ class Educator
     end
     response
   end
-
 end
