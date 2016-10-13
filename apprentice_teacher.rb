@@ -25,11 +25,6 @@ class ApprenticeTeacher < Education
     @phase = 3
   end
 
-  # def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
-  # end
-
   def attend_training_session
     puts "Whoa. I know ruby-fu"
   end
@@ -66,4 +61,9 @@ end
 
   # def receive_raise(raise)
   #   @salary += raise
+  # end
+
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
   # end

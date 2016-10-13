@@ -25,11 +25,6 @@ class SeniorTeacher < Education
     @phase = 3
   end
 
-  # def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
-  # end
-
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
@@ -66,4 +61,9 @@ end
 
   # def receive_raise(raise)
   #   @salary += raise
+  # end
+
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
   # end
