@@ -1,24 +1,27 @@
-class SeniorTeacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative "modules"
 
-  def initialize(options={})
-    @phase = 3
+class SeniorTeacher 
+  include Teachers
+
+  attr_reader :age, :salary
+  attr_accessor :name, :phase, :target_raise
+
+  RATING = 90
+  TARGET_RAISE = 1000
+
+  def initialize(options={}) 
+    @phase = options.fetch(:phase, 3)
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
-    @target_raise = 1000
+    @target_raise = options.fetch(:target_raise, 1000)
+    @performance_rating = nil
   end
 
-  def offer_high_five
-    "High five!"
+  def lead_training_session
+    puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
-
-  def teach_stuff
+ def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
     response += "*drops flat-out insane knowledge bomb* "
@@ -26,28 +29,17 @@ class SeniorTeacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
-  end
-
-  def set_performance_rating(rating)
+ def set_performance_rating(rating)
     response = ""
     if rating > 90
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
-    else
       response += "Oh, well -- thanks to this actionable, specific, and kind "
       response += "feedback, I'll do better next time."
     end
     response
   end
 
-  def lead_training_session
-    puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
-  end
+
 end
+
