@@ -8,6 +8,10 @@ class Teacher < Person
 		@target_raise = self.class::TARGET_RAISE
 	end
 
+	def set_phase(num)
+	    @phase = num
+	    "Cool, I've always wanted to teach phase #{num}!"
+ 	 end
 	# def teach_stuff
 	#     response = ""
 	#     response += "Listen, class, this is how everything works. "

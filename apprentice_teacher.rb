@@ -4,10 +4,10 @@ class ApprenticeTeacher < Teacher
   PHASE = 3
   TARGET_RAISE = 800
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
+  # end
 
   def teach_stuff
     response = ""
@@ -16,10 +16,6 @@ class ApprenticeTeacher < Teacher
     response += "... You're welcome."
     response
   end
-
-  # def receive_raise(raise)
-  #   @salary += raise
-  # end
 
   def set_performance_rating(rating)
     response = ""

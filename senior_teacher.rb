@@ -5,10 +5,10 @@ class SeniorTeacher < Teacher
   TARGET_RAISE = 1000
   attr_reader :performance_rating
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
+  # end
 
   def teach_stuff
     response = ""
@@ -17,10 +17,6 @@ class SeniorTeacher < Teacher
     response += "... You're welcome. *saunters away*"
     response
   end
-
-  # def receive_raise(raise)
-  #   @salary += raise
-  # end
 
   def set_performance_rating(rating)
     response = ""
