@@ -35,4 +35,10 @@ class Teacher
     response
   end
 
+  # def teach_stuff
+  #   response = ""
+  #   response += "*drops flat-out insane knowledge bomb* "
+  #   response
+  # end
+
 end

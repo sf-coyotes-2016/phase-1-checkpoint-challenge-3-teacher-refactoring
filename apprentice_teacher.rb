@@ -12,6 +12,9 @@ class ApprenticeTeacher < Teacher
   end
 
   def teach_stuff
+    # response = super
+    # response = "Listen, class, this is how everything works. " + response + "... You're welcome."
+    # response
     response = ""
     response += "Listen, class, this is how everything works. "
     response += "*drops crazy knowledge bomb* "
