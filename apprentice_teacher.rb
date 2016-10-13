@@ -1,4 +1,6 @@
 class ApprenticeTeacher
+  RATING = 80
+
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
