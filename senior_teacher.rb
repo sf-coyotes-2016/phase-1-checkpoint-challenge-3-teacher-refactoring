@@ -3,20 +3,10 @@ require_relative 'teacher'
 class SeniorTeacher < Teacher
   PHASE = 3
   TARGET_RAISE = 1000
+  LISTEN = "Listen, class, this is how everything works, fo SHO! "
+  KNOWLEDGE = "*drops flat-out insane knowledge bomb* "
+  WELCOME = "... You're welcome. *saunters away*"
   attr_reader :performance_rating
-
-  # def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
-  # end
-
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
-  end
 
   def set_performance_rating(rating)
     response = ""

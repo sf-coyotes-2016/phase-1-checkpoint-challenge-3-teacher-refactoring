@@ -11,14 +11,15 @@ class Teacher < Person
 	def set_phase(num)
 	    @phase = num
 	    "Cool, I've always wanted to teach phase #{num}!"
- 	 end
-	# def teach_stuff
-	#     response = ""
-	#     response += "Listen, class, this is how everything works. "
-	#     response += "*drops crazy knowledge bomb* "
-	#     response += "... You're welcome."
-	#     respons
- # 	end	
+ 	end
+
+	def teach_stuff
+	    response = ""
+	    response += self.class::LISTEN
+	    response += self.class::KNOWLEDGE
+	    response += self.class::WELCOME
+	    response
+ 	end	
 
  	def salary=(new_salary)
     	puts "This better be good!"
