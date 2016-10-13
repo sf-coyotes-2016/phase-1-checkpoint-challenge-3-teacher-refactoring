@@ -22,6 +22,7 @@ RATING = 80
     response += "... You're welcome."
     response
   end
+  # I can refactor this in module by declaring few more constants because it only differs in few words from apprentice teacher class.just dont have enough time to do it.
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"
