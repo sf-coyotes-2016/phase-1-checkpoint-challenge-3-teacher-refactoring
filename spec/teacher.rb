@@ -1,6 +1,8 @@
+
+
 class Teacher
 
-   def initialize(options={})
+  def initialize(options={})
     @phase = 3
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
