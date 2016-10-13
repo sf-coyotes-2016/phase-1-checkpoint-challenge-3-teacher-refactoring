@@ -15,6 +15,6 @@ module Teacher
   end
 
 end
-
+#Did not have time to add similarities within teach_stuff and set_performance_rating
 #Looking back, I should have made people a module and teacher
 #a parent class.
