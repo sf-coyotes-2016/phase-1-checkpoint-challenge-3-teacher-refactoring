@@ -1,9 +1,7 @@
 require_relative 'human'
 
-class ApprenticeTeacher < Human
+class ApprenticeTeacher < Teacher
   include HighFiveable
-
-  RATING = 80
 
   attr_reader :salary, :phase, :target_raise
 
@@ -13,11 +11,6 @@ class ApprenticeTeacher < Human
     @phase = 3
   end
 
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
 
   def teach_stuff
     response = ""

@@ -6,10 +6,8 @@ class Student < Human
   attr_reader :phase
 
   def initialize(options = {})
-    super
     @phase = 1
   end
-
 
 
   def set_phase(num)
