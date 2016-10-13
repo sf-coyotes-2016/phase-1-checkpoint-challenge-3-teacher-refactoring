@@ -3,10 +3,6 @@ require_relative 'person'
 class Student < Person
   PHASE = 1
 
-  def offer_high_five
-    "High five!"
-  end
-
   def set_phase(num)
     response = ""
     if num == @phase

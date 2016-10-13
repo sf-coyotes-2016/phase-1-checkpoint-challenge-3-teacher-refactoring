@@ -7,4 +7,9 @@ class Person
 		@name = options.fetch(:name, '')
 		@phase = self.class::PHASE
 	end
+
+	def offer_high_five
+    	"High five!"
+  	end
+
 end
