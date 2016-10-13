@@ -1,12 +1,16 @@
 require_relative 'education'
 require_relative 'set_performance_rating'
 require_relative 'teach_stuff'
+require_relative 'receive_raise'
 
 class SeniorTeacher < Education
   attr_reader :salary, :performance_rating, :target_raise
 
   include PerformanceRating
   include TeachStuff
+  include ReceiveRaise
+  include Salary
+
   RATING = 90
   TEACH_RESPONSE = "Listen, class, this is how everything works, fo SHO! "
   BOMB_RESPONSE = "*drops flat-out insane knowledge bomb* "
@@ -23,15 +27,6 @@ class SeniorTeacher < Education
   def set_phase(num)
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def lead_training_session
@@ -61,4 +56,13 @@ end
   #   response += "*drops flat-out insane knowledge bomb* "
   #   response += "... You're welcome. *saunters away*"
   #   response
+  # end
+
+  # def salary=(new_salary)
+  #   puts "This better be good!"
+  #   @salary = new_salary
+  # end
+
+  # def receive_raise(raise)
+  #   @salary += raise
   # end
