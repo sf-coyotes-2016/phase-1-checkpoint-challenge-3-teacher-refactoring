@@ -3,8 +3,7 @@ require_relative'high_give_module.rb'
 require_relative'school'
 
 class ApprenticeTeacher < School
-attr_reader  :salary, :target_raise
-  
+ 
 include Highfive
 include Staff
 RATING = 80
@@ -14,6 +13,7 @@ RATING = 80
     @target_raise = 800
     @phase = 3
   end
+
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "
@@ -22,7 +22,7 @@ RATING = 80
     response
   end
 
-   def attend_training_session
+  def attend_training_session
     puts "Whoa. I know ruby-fu"
   end
 end

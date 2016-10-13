@@ -3,16 +3,17 @@ require_relative'high_give_module.rb'
 require_relative'school'
 
 class SeniorTeacher < School
-attr_reader :salary, :performance_rating, :target_raise
-
+attr_reader  :performance_rating
  include Highfive
  include Staff
  RATING = 90
+  
   def initialize(options={})
     super
     @phase = 3
     @target_raise = 1000
   end
+  
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
