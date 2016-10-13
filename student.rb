@@ -1,6 +1,5 @@
 require_relative 'human'
 
-
 class Student < Human
   attr_reader :phase
 

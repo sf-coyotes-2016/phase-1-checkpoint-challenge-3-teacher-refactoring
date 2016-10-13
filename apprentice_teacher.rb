@@ -3,6 +3,7 @@ require_relative 'human'
 class ApprenticeTeacher < Human
   include Settable
   include SalaryUpdatable
+  include ReceiveRaisable
 
   attr_reader :salary, :phase, :target_raise
 
@@ -18,10 +19,6 @@ class ApprenticeTeacher < Human
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)

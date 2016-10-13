@@ -10,7 +10,6 @@ class Human
 	def offer_high_five
 	   "High five!"
 	end
-
 end
 
 module Settable
@@ -26,3 +25,9 @@ module SalaryUpdatable
     	@salary = new_salary
   	end
 end
+
+module ReceiveRaisable
+	def receive_raise(raise)
+	    @salary += raise
+	end
+end 

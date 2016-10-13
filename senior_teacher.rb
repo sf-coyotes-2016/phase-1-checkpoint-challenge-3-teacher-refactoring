@@ -1,10 +1,9 @@
 require_relative 'human'
 
-
 class SeniorTeacher < Human
   include Settable
   include SalaryUpdatable
-   
+  include ReceiveRaisable
 
   attr_reader :salary, :phase, :performance_rating, :target_raise
 
@@ -20,10 +19,6 @@ class SeniorTeacher < Human
     response += "*drops flat-out insane knowledge bomb* "
     response += "... You're welcome. *saunters away*"
     response
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
