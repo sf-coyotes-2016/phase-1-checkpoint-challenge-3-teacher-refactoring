@@ -1,3 +1,4 @@
+require_relative'../high_give_module.rb'
 require_relative'../school'
 require_relative '../senior_teacher'
 

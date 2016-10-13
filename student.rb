@@ -1,6 +1,8 @@
+require_relative'high_give_module.rb'
+
 require_relative'school'
 class Student < School
-  
+  include Highfive
 
 
   def initialize(options = {})

@@ -1,8 +1,11 @@
+require_relative'module_staff'
+require_relative'high_give_module.rb'
 require_relative'school'
 class ApprenticeTeacher < School
 attr_reader  :salary, :target_raise
   # attr_accessor :name
-
+include Highfive
+include Staff
   def initialize(options={})
    super
     # @age = options.fetch(:age, 0)
@@ -10,9 +13,9 @@ attr_reader  :salary, :target_raise
     @target_raise = 800
     @phase = 3
   end
-def offer_high_five
-    "High five!"
-  end
+# def offer_high_five
+#     "High five!"
+#   end
   
 
   def set_phase(num)
