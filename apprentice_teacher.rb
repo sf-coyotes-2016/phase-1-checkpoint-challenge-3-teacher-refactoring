@@ -1,11 +1,16 @@
 require_relative 'education'
 require_relative 'set_performance_rating'
+require_relative 'teach_stuff'
 
 class ApprenticeTeacher < Education
   attr_reader :salary, :target_raise
 
   include PerformanceRating
+  include TeachStuff
   RATING = 80
+  TEACH_RESPONSE = "Listen, class, this is how everything works. "
+  BOMB_RESPONSE = "*drops crazy knowledge bomb* "
+  SASSY = "... You're welcome."
 
   def initialize(options={})
     # @name = options.fetch(:name, "")
@@ -20,13 +25,6 @@ class ApprenticeTeacher < Education
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works. "
-    response += "*drops crazy knowledge bomb* "
-    response += "... You're welcome."
-    response
-  end
 
   def salary=(new_salary)
     puts "This better be good!"
@@ -56,5 +54,13 @@ end
   #     response += "Oh, well -- thanks to this actionable, specific, and kind "
   #     response += "feedback, I'll do better next time."
   #   end
+  #   response
+  # end
+
+  # def teach_stuff
+  #   response = ""
+  #   response += "Listen, class, this is how everything works. "
+  #   response += "*drops crazy knowledge bomb* "
+  #   response += "... You're welcome."
   #   response
   # end

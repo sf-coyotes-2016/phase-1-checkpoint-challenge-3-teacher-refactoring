@@ -1,11 +1,16 @@
 require_relative 'education'
 require_relative 'set_performance_rating'
+require_relative 'teach_stuff'
 
 class SeniorTeacher < Education
   attr_reader :salary, :performance_rating, :target_raise
 
   include PerformanceRating
+  include TeachStuff
   RATING = 90
+  TEACH_RESPONSE = "Listen, class, this is how everything works, fo SHO! "
+  BOMB_RESPONSE = "*drops flat-out insane knowledge bomb* "
+  SASSY = "... You're welcome. *saunters away*"
 
   def initialize(options={})
     # @age = options.fetch(:age, 0)
@@ -18,14 +23,6 @@ class SeniorTeacher < Education
   def set_phase(num)
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
-  end
-
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
   end
 
   def salary=(new_salary)
@@ -56,4 +53,12 @@ end
 
   # def offer_high_five
   #   "High five!"
+  # end
+
+  # def teach_stuff
+  #   response = ""
+  #   response += "Listen, class, this is how everything works, fo SHO! "
+  #   response += "*drops flat-out insane knowledge bomb* "
+  #   response += "... You're welcome. *saunters away*"
+  #   response
   # end
