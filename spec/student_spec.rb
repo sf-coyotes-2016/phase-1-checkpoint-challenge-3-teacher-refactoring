@@ -1,3 +1,5 @@
+require_relative'../high_give_module.rb'
+require_relative'../school'
 require_relative '../student'
 
 describe Student do

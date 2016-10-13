@@ -1,3 +1,6 @@
+require_relative'../module_staff'
+require_relative'../high_give_module.rb'
+require_relative'../school'
 require_relative '../senior_teacher'
 
 describe SeniorTeacher do
