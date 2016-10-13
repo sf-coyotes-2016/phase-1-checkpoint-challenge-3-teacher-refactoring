@@ -3,10 +3,11 @@ class SeniorTeacher
   attr_accessor :name
 
   def initialize(options={})
-    @phase = 3
+    Super
+    @phase = 3 
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
-    @target_raise = 1000
+    TARGETRAISE = 1000
   end
 
   def offer_high_five
@@ -37,9 +38,9 @@ class SeniorTeacher
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if self.class::RATING > 90
       response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
+      receive_raise self.class::TARGETRAISE
     else
       response += "Oh, well -- thanks to this actionable, specific, and kind "
       response += "feedback, I'll do better next time."
