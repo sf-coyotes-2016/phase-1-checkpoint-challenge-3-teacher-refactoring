@@ -2,6 +2,7 @@ require_relative 'human'
 
 class ApprenticeTeacher < Teacher
   include HighFiveable
+  include Payable
 
   attr_reader :salary, :phase, :target_raise
 
@@ -20,14 +21,7 @@ class ApprenticeTeacher < Teacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
 
   def set_performance_rating(rating)
     response = ""

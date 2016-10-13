@@ -5,6 +5,14 @@ module HighFiveable
 end
 
 module Payable
+  def salary=(new_salary)
+    puts "This better be good!"
+    @salary = new_salary
+  end
+
+  def receive_raise(raise)
+    @salary += raise
+  end
 end
 
 
@@ -23,5 +31,4 @@ class Teacher < Human
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
   end
-
 end
