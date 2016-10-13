@@ -8,4 +8,17 @@ class Teacher < Person
 		@target_raise = self.class::TARGET_RAISE
 	end
 
+	# def teach_stuff
+	#     response = ""
+	#     response += "Listen, class, this is how everything works. "
+	#     response += "*drops crazy knowledge bomb* "
+	#     response += "... You're welcome."
+	#     respons
+ # 	end	
+
+ 	def salary=(new_salary)
+    	puts "This better be good!"
+    	@salary = new_salary
+  	end
+
 end
