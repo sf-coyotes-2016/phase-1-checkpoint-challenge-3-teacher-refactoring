@@ -21,4 +21,8 @@ class Teacher < Person
     	@salary = new_salary
   	end
 
+	def receive_raise(raise)
+		@salary += raise
+	end
+
 end
