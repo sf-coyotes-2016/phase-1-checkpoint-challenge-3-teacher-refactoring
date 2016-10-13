@@ -4,7 +4,7 @@ Edit this file to answer the following questions. Give examples. You may need to
 
 1. Why is Hash.fetch useful?
 
-2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
+2. What is the disadvantage of single inheritance as opposed to multiple inheritance, and what's a possible solution to that problem?
 
 3. Why are these classes initialized with an options hash?
 
