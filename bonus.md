@@ -3,6 +3,7 @@
 Edit this file to answer the following questions. Give examples. You may need to do a bit of research. :)
 
 1. Why is Hash.fetch useful?
+	Hash.fetch is useful because it give you options for the value returned if the item is not found. it can raise an error, you can set a default value to it or run another line of code. instead of just nil
 
 2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
 
