@@ -1,17 +1,20 @@
-class SeniorTeacher
+require_relative 'education'
+
+class SeniorTeacher < Education
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
+    super
     @target_raise = 1000
+    @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
 
   def set_phase(num)
     @phase = num
