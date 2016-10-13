@@ -6,6 +6,7 @@ class Educator
     @phase = 3 
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
+    @target_raise = self.class::TARGET_RAISE
   end
 
   def set_phase(num)
@@ -20,6 +21,26 @@ class Educator
 
   def receive_raise(raise)
     @salary += raise
+  end
+
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works. "
+    response += "*drops crazy knowledge bomb* "
+    response += "... You're welcome."
+    response
+  end
+
+  def set_performance_rating(rating)
+    response = ""
+    if rating > self.class::RATING
+      response = "Yay, I'm a great employee!"
+      receive_raise(@target_raise)
+    else
+      response += "Oh, well -- thanks to this actionable, specific, and kind "
+      response += "feedback, I'll do better next time."
+    end
+    response
   end
 
 end
