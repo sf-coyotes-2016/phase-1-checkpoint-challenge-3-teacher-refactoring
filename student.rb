@@ -1,8 +1,6 @@
 require_relative 'education'
 
 class Student < Education
-  attr_reader :age, :phase
-  attr_accessor :name
 
   def initialize(options = {})
     # @age = options.fetch(:age, 0)

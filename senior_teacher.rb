@@ -1,8 +1,7 @@
 require_relative 'education'
 
 class SeniorTeacher < Education
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :performance_rating, :target_raise
 
   def initialize(options={})
     # @age = options.fetch(:age, 0)

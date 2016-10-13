@@ -1,8 +1,7 @@
 require_relative 'education'
 
 class ApprenticeTeacher < Education
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :target_raise
 
   def initialize(options={})
     # @name = options.fetch(:name, "")
@@ -54,3 +53,9 @@ class ApprenticeTeacher < Education
     puts "Whoa. I know ruby-fu"
   end
 end
+
+
+# teach = ApprenticeTeacher.new(name: "Tim", age: 10)
+
+# p teach.age
+# p teach.name
