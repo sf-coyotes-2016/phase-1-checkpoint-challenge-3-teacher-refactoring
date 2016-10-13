@@ -7,17 +7,10 @@ class ApprenticeTeacher < Educator
   attr_accessor :name
   TARGET_RAISE = 800
   RATING = 80
+  RESPONSE = "Listen, class, this is how everything works. *drops crazy knowledge bomb* ... You're welcome."
 
   def initialize(options={})
     super
-  end
-
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works. "
-    response += "*drops crazy knowledge bomb* "
-    response += "... You're welcome."
-    response
   end
 
   def attend_training_session

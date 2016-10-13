@@ -3,13 +3,13 @@ class Educator
   attr_accessor :name
 
   def initialize(options = {})
-    @phase = 3 
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    @phase = 3 #work into module 
+    @age = options.fetch(:age, 0) #add to module
+    @name = options.fetch(:name, "") #add to module
     @target_raise = self.class::TARGET_RAISE
   end
 
-  def set_phase(num)
+  def set_phase(num) #work into module
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
   end
@@ -24,11 +24,7 @@ class Educator
   end
 
   def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works. "
-    response += "*drops crazy knowledge bomb* "
-    response += "... You're welcome."
-    response
+    self.class::RESPONSE
   end
 
   def set_performance_rating(rating)

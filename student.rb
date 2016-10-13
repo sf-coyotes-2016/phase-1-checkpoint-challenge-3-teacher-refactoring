@@ -6,12 +6,12 @@ class Student
   attr_accessor :name
 
   def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    @phase = 1 #work into module 
+    @age = options.fetch(:age, 0) #add to module
+    @name = options.fetch(:name, "") #add to module
   end
 
-  def set_phase(num)
+  def set_phase(num) #work into module 
     response = ""
     if num == @phase
       response += "I'm doing phase #{@phase} again because "
