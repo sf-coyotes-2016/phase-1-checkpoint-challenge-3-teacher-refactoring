@@ -1,7 +1,11 @@
 require_relative 'education'
+require_relative 'set_performance_rating'
 
 class SeniorTeacher < Education
   attr_reader :salary, :performance_rating, :target_raise
+
+  include PerformanceRating
+  RATING = 90
 
   def initialize(options={})
     # @age = options.fetch(:age, 0)
@@ -10,10 +14,6 @@ class SeniorTeacher < Education
     @target_raise = 1000
     @phase = 3
   end
-
-  # def offer_high_five
-  #   "High five!"
-  # end
 
   def set_phase(num)
     @phase = num
@@ -37,19 +37,23 @@ class SeniorTeacher < Education
     @salary += raise
   end
 
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 90
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
-  end
-
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
 end
+
+  # def set_performance_rating(rating)
+  #   response = ""
+  #   if rating > 90
+  #     response = "Yay, I'm a great employee!"
+  #     receive_raise(@target_raise)
+  #   else
+  #     response += "Oh, well -- thanks to this actionable, specific, and kind "
+  #     response += "feedback, I'll do better next time."
+  #   end
+  #   response
+  # end
+
+  # def offer_high_five
+  #   "High five!"
+  # end

@@ -9,10 +9,6 @@ class Student < Education
     @phase = 1
   end
 
-  # def offer_high_five
-  #   "High five!"
-  # end
-
   def set_phase(num)
     response = ""
     if num == @phase
@@ -32,3 +28,7 @@ class Student < Education
     response
   end
 end
+
+  # def offer_high_five
+  #   "High five!"
+  # end
