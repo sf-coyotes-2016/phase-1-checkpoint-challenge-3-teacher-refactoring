@@ -13,7 +13,7 @@ attr_reader  :performance_rating
     @phase = 3
     @target_raise = 1000
   end
-  
+
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
@@ -21,6 +21,8 @@ attr_reader  :performance_rating
     response += "... You're welcome. *saunters away*"
     response
   end
+  # I can refactor this in module by declaring few more constants because it only differs in few words from apprentice teacher class.just dont have enough time to do it.
+
 
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
