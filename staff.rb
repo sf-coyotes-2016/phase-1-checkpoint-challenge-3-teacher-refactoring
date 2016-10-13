@@ -1,8 +1,13 @@
 class Staff
 
-	def initialize 
+	attr_reader :phase
 
-	end
+	def initialize(options={})
+    @phase = 3
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
+    # @target_raise = 1000
+  end
 
 	def set_phase(num)
     @phase = num
