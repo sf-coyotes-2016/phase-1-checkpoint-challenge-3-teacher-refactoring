@@ -1,0 +1,6 @@
+class School
+
+
+
+end
+
