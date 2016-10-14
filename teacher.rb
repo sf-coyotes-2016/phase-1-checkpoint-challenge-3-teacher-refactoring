@@ -1,4 +1,3 @@
-require_relative 'high_five'
 require_relative 'human'
 
 class Teacher < Human

@@ -1,12 +1,6 @@
-require_relative 'high_five'
+require_relative 'human'
 
 class Student < Human
-
-  def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-  end
 
   def set_phase(num)
     if num == @phase
