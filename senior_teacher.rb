@@ -4,7 +4,6 @@ class SeniorTeacher < Teacher
   attr_reader :performance_rating
 
   def teach_stuff
-    super
   "Listen, class, this is how everything works, fo SHO! *drops flat-out insane knowledge bomb* ... You're welcome. *saunters away*"
   end
 
