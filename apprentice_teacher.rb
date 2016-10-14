@@ -1,10 +1,8 @@
 require_relative 'teacher'
 
 class ApprenticeTeacher < Teacher
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
 
-  def initialize(options={})
+  def initialize(options = {})
     super
     @target_raise = 800
     @rating_bar = 80

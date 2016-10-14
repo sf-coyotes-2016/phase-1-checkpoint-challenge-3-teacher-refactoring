@@ -1,13 +1,11 @@
 require_relative 'high_five'
+require_relative 'human'
 
-class Teacher
-  include HighFive
-  attr_reader :age, :salary, :phase, :target_raise, :rating_bar
-  attr_accessor :name
+class Teacher < Human
+  attr_reader :salary, :target_raise, :rating_bar
 
-  def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+  def initialize(options = {})
+    super
     @target_raise = 1000
     @phase = 3
     @rating_bar = 90
