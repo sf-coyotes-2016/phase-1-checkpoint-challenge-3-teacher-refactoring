@@ -1,13 +1,10 @@
 require_relative 'educator'
-require_relative 'teaching'
 
 class SeniorTeacher < Educator
-  include Teaching
 
   attr_reader  :performance_rating
 
   RATING_REQUIREMENT = 90
-  TEACHER_TYPE = "Senior"
 
   def initialize(options={})
     super
@@ -17,4 +14,13 @@ class SeniorTeacher < Educator
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
+
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works, fo SHO! "
+    response += "*drops flat-out insane knowledge bomb* "
+    response += "... You're welcome. *saunters away*"
+    response
+  end
+  
 end

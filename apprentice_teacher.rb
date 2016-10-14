@@ -1,15 +1,21 @@
 require_relative 'educator'
-require_relative 'teaching'
 
 class ApprenticeTeacher < Educator
-  include Teaching
   
   RATING_REQUIREMENT = 80
-  TEACHER_TYPE = "Apprentice"
 
   def initialize(options={})
     super
     @target_raise = 800
+  end
+
+
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works. "
+    response += "*drops crazy knowledge bomb* "
+    response += "... You're welcome."
+    response
   end
 
   def attend_training_session

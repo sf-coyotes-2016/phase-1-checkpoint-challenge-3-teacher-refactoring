@@ -1,6 +1,6 @@
 class Person
-	attr_reader :age, :phase
-	attr_accessor :name
+  attr_reader :age, :phase
+  attr_accessor :name
 
   def initialize(options = {})
     @age = options.fetch(:age, 0)

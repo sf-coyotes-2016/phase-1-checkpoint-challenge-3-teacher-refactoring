@@ -6,6 +6,13 @@ Edit this file to answer the following questions. Give examples. You may need to
 
 Hash.fetch is useful because it allows us to set up a default value if nothing is passed in on initialize.
 
+What's the difference between args[key] and args.fetch(key) if the key key is not present in the args hash?
+
+if both the keys are not present
+args[key] will default to a nil value
+
+args.fetch(key) will raise an error saying invalid parameters or key not found.
+
 2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
 
 The disadvantage of single inheritance is that information can only be passed down one way in a very structured parent/child tree.
