@@ -1,10 +1,8 @@
-require_relative 'education'
+require_relative 'dbc'
 
-class Student < Education
+class Student < DBCPerson
 
   def initialize(options = {})
-    # @age = options.fetch(:age, 0)
-    # @name = options.fetch(:name, "")
     super
     @phase = 1
   end
@@ -28,7 +26,3 @@ class Student < Education
     response
   end
 end
-
-  # def offer_high_five
-  #   "High five!"
-  # end
