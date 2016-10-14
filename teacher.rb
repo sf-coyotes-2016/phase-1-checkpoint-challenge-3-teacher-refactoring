@@ -1,4 +1,4 @@
-require_relative 'dbc'
+require_relative 'dbc_person'
 
 class Teacher < DbcPerson
 	attr_reader :salary
