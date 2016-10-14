@@ -1,8 +1,7 @@
 require_relative 'teacher'
 
 class SeniorTeacher < Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+  attr_reader :performance_rating
 
   # here I was hesitating between using interpolation with #{, fo SHO!} 
   # and #{*saunters away*} and then set this in teacher method but couldn't decide what is better practice
@@ -15,6 +14,6 @@ class SeniorTeacher < Teacher
   end
 
   def lead_training_session
-    puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
+    "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
 end

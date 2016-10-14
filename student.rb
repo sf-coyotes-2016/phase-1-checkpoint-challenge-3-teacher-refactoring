@@ -1,8 +1,6 @@
 require_relative 'dbc_person'
 
 class Student < DbcPerson
-  attr_reader :age, :phase
-  attr_accessor :name
 
   def initialize(options = {})
     super
