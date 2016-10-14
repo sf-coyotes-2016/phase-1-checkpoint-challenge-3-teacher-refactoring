@@ -1,29 +1,24 @@
-class SeniorTeacher
+require_relative "educator"
+require_relative "education_system"
+
+class SeniorTeacher < Educator
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
+  include EducationSystem
+
+  TARGET_RAISE = 1000
+  PHASE = 3
+  RATING = 90
+  RESPONSE = "Listen, class, this is how everything works, fo SHO! *drops flat-out insane knowledge bomb* ... You're welcome. *saunters away*"
 
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 1000
+    super
   end
 
-  def offer_high_five
-    "High five!"
-  end
 
   def set_phase(num)
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
-  end
-
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
   end
 
   def salary=(new_salary)
@@ -33,18 +28,6 @@ class SeniorTeacher
 
   def receive_raise(raise)
     @salary += raise
-  end
-
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 90
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
   end
 
   def lead_training_session
