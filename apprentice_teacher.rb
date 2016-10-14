@@ -9,6 +9,6 @@ class ApprenticeTeacher < Teacher
   end
 
   def attend_training_session
-    puts "Whoa. I know ruby-fu"
+    "Whoa. I know ruby-fu"
   end
 end
