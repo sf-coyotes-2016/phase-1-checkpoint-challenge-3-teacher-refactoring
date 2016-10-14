@@ -1,7 +1,4 @@
-# require_relative 'training'
-
 class SchoolMember
-	# include Training
 
 	attr_reader :age, :phase
 	attr_accessor :name

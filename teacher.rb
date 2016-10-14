@@ -1,8 +1,15 @@
 require_relative 'school_member'
-require_relative 'payable'
 
 class Teacher < SchoolMember
-	include Payable
+
+	def salary=(new_salary)
+    puts "This better be good!"
+    @salary = new_salary
+  end
+
+  def receive_raise(raise)
+    @salary += raise
+  end
 
 	def set_phase(num)
     @phase = num
@@ -16,5 +23,4 @@ class Teacher < SchoolMember
     response += "... You're welcome."
     response
   end
-
 end
