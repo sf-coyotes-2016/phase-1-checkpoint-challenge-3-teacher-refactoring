@@ -33,6 +33,15 @@ class Teacher
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     # Decided to use class variables instead of constants because these can and should change with time. Raises should grow with inflation
+    # Creating this as an instance variable depend on the model we're working with. If our raise schedule
+    # and evaluation criteria are the same for every teacher, a class variable or constant
+    # are best. If they very, there's a legitimate reason to create a unique instance variable for
+    # each teacher. 
+
+
+    # LAWL then I read more about class variables vs constants and worked it out.
+    # A class variable that will only be reset once or twice a year could just as well 
+    # be a constant and will likely cause fewer problems within a framework like rails. 
     # BENCHMARK_RATING = 90
     # TARGET_RAISE = 1000
   end
