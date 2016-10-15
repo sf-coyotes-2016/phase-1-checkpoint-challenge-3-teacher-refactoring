@@ -6,6 +6,10 @@ Edit this file to answer the following questions. Give examples. You may need to
 
 Hash fetch is useful because it allows us to set default values from our args hash without running into issues with booleans. Using the logical or can cause problems, especially when trying to set to boolean `false` or `nil`. Using `||`, those will never be true and thus, never be assigned. 
 
+Fetch gives a more useful error message if a key isn't found. Instead of simply returning `nil`, it tells us that the key isn't found. 
+
+In case I ever need to review fetch, [this link is a solid review](http://www.virtuouscode.com/2009/03/16/go-fetch/).
+
 2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
 
 The disadvantage of single inheritance is that objects can only take bahovior from one other source. Given a we had a class of `Car` that drives, and a class of `Dog` that barks, we wouldn't be able to write very DRY code to build a thing that barks and drives, like a van that barks when the horn is pressed. 
