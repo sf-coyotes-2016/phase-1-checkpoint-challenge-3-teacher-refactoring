@@ -1,15 +1,16 @@
-class SeniorTeacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'person'
+require_relative 'Highfive'
+
+class SeniorTeacher < Person
+  attr_reader :salary, :performance_rating, :target_raise
+  
+   include Highfive
 
   def initialize(options={})
+    super
     @phase = 3
     
     @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)

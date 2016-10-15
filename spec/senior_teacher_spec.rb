@@ -1,4 +1,6 @@
 require_relative '../senior_teacher'
+require_relative '../person'
+require_relative '../Highfive'
 
 describe SeniorTeacher do
   let(:jan) { SeniorTeacher.new({name: "Jan", age: 35}) }

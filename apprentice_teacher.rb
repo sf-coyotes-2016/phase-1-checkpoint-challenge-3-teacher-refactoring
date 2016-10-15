@@ -1,12 +1,17 @@
 require_relative 'person'
+require_relative 'Highfive'
+
+
 
 class ApprenticeTeacher < Person
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :target_raise
+ 
+  include Highfive
 
   def initialize(options={})
     super
     
+    @target_raise = 800
     @phase = 3
   end
 
