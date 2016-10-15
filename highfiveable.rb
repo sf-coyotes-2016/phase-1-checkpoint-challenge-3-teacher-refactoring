@@ -1,4 +1,4 @@
-module Teachable
+module HighFiveAble
   def offer_high_five
     "High five!"
   end

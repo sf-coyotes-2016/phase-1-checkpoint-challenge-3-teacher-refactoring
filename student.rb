@@ -1,5 +1,18 @@
+# I don't want to add a person class here, but if I did, here's how it would look.
+=begin 
+class Student < Person
+  include HighFiveAble
+
+  attr_reader :phase
+  attr_accessor :name
+
+  def initialize(options = {})
+    super
+    @phase = 1
+  end
+=end
 class Student
-  include Teachable
+  include HighFiveAble
 
   attr_reader :age, :phase
   attr_accessor :name

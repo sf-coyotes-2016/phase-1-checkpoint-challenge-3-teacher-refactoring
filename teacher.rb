@@ -1,7 +1,29 @@
-require_relative 'teachable'
+require_relative 'highfiveable'
+# I think the person class creates an additional dependency for the meager benefit of 2 lines 
+# and would choose not to do it with what I currently understand (I'd also love to know
+# know why I'm wrong in thinking about it that way). 
+
+# That said, if we were implementing it, the Teacher class declaration would look like this:
+=begin
+require_relative 'person'
+class Teacher < Person
+  include HighFiveAble
+
+  attr_reader :salary, :phase, :target_raise
+
+
+  def initialize(options={})
+    super
+    @phase = 3
+    # Decided to use class variables instead of constants because these can and should change with time. Raises should grow with inflation
+    @@benchmark_rating = 90
+    @@target_raise = 1000
+  end
+
+=end
 
 class Teacher
-  include Teachable
+  include HighFiveAble
 
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
@@ -10,8 +32,9 @@ class Teacher
     @phase = 3
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
-    @benchmark_rating = 90
-    @target_raise = 1000
+    # Decided to use class variables instead of constants because these can and should change with time. Raises should grow with inflation
+    @@benchmark_rating = 90
+    @@target_raise = 1000
   end
 
   def set_phase(num)
@@ -30,8 +53,8 @@ class Teacher
 
   def set_performance_rating(rating)
     response = ""
-    if rating > @benchmark_rating
-      receive_raise(@target_raise)
+    if rating > @@benchmark_rating
+      receive_raise(@@target_raise)
       response = "Yay, I'm a great employee!"
     else
       response += "Oh, well -- thanks to this actionable, specific, and kind "
