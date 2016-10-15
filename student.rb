@@ -1,21 +1,14 @@
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+require_relative "person"
 
-  def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-  end
+class Student < Person
+  attr_reader :phase
 
-  def offer_high_five
-    "High five!"
-  end
+  PHASE = 1
 
   def set_phase(num)
     response = ""
-    if num == @phase
-      response += "I'm doing phase #{@phase} again because "
+    if num == PHASE
+      response += "I'm doing phase #{PHASE} again because "
       response += "I put my learning first. I'm gonna rock it!"
     else
       response = "Oooh, phase #{num}. I hope I'm ready!"
