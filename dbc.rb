@@ -4,11 +4,11 @@ class DBCPerson
 
 	def initialize(options={})
 		@age = options.fetch(:age, 0)
-	   @name = options.fetch(:name, "")
-	   @phase = 0
+		@name = options.fetch(:name, "")
+		@phase = 0
 	end
 
 	def offer_high_five
-   	"High five!"
-  	end
+		"High five!"
+	end
 end

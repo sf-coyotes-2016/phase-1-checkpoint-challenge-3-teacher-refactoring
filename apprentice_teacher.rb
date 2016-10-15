@@ -1,9 +1,6 @@
 require_relative 'teacher'
-require_relative 'payment'
 
 class ApprenticeTeacher < Teacher
-
-  include Payment
 
   RATING = 80
   TEACH_RESPONSE = "Listen, class, this is how everything works. "
@@ -20,11 +17,3 @@ class ApprenticeTeacher < Teacher
     puts "Whoa. I know ruby-fu"
   end
 end
-
-  # def teach_stuff
-  #   response = ""
-  #   response += "Listen, class, this is how everything works. "
-  #   response += "*drops crazy knowledge bomb* "
-  #   response += "... You're welcome."
-  #   response
-  # end
