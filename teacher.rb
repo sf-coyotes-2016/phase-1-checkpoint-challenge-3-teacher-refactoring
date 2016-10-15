@@ -8,6 +8,11 @@ class Teacher < Person
 		@target_raise = self.class::TARGET_RAISE
 	end
 
+	# 	better to set @target_raise to a new method for memory purposes
+	# 	def target_raise
+	# 		self.class::TARGET_RAISE
+	# 	end
+
 	def set_phase(num)
 	    @phase = num
 	    "Cool, I've always wanted to teach phase #{num}!"

@@ -1,5 +1,5 @@
 module HighFiveable
 	def offer_high_five
-    	"High five!"
-  	end
+    "High five!"
+  end
 end
