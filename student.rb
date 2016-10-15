@@ -4,8 +4,7 @@ class Student
 
   def initialize(options = {})
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    
     
   end
 
