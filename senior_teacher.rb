@@ -4,6 +4,9 @@ class SeniorTeacher < Teacher
   attr_reader  :performance_rating
   attr_accessor :name
 
+  BENCHMARK_RATING = 90
+  TARGET_RAISE = 1000
+  
   def initialize(options={})
     super
   end

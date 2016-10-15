@@ -33,8 +33,8 @@ class Teacher
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     # Decided to use class variables instead of constants because these can and should change with time. Raises should grow with inflation
-    @@benchmark_rating = 90
-    @@target_raise = 1000
+    # BENCHMARK_RATING = 90
+    # TARGET_RAISE = 1000
   end
 
   def set_phase(num)
@@ -53,13 +53,29 @@ class Teacher
 
   def set_performance_rating(rating)
     response = ""
-    if rating > @@benchmark_rating
-      receive_raise(@@target_raise)
+    if rating > benchmark_rating
+      receive_raise(target_raise)
       response = "Yay, I'm a great employee!"
     else
       response += "Oh, well -- thanks to this actionable, specific, and kind "
       response += "feedback, I'll do better next time."
     end
     response
+  end
+
+  def benchmark_rating
+    # This should actually have a custom message in the name error saying something
+    # to the effect of the target raise wasn't defined in the concrete class. I haven't
+    # figured out how to make it take the constnt value from the subclass without redefining that method. 
+
+    self.class::BENCHMARK_RATING || "Not implemented in subclass"
+  end
+
+  def target_raise
+    # This should actually have a custom message in the name error saying something
+    # to the effect of the target raise wasn't defined in the concrete class
+    self.class::TARGET_RAISE || "Not implemented in subclass"
+
+    # "Not implemented in subclass"
   end
 end

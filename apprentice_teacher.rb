@@ -2,10 +2,11 @@ require_relative 'Teacher'
 
 class ApprenticeTeacher < Teacher
 
+  TARGET_RAISE = 800
+  BENCHMARK_RATING = 80
+
   def initialize(options={})
     super
-    @@target_raise = 800
-    @@benchmark_rating = 80
   end
 
   def attend_training_session
@@ -20,4 +21,5 @@ class ApprenticeTeacher < Teacher
     response += "... You're welcome."
     response
   end
+
 end
