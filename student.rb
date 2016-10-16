@@ -1,7 +1,5 @@
 require_relative 'person'
 class Student < Person
-  attr_reader :age, :phase
-  attr_accessor :name
 
   def initialize(options = {})
     super
@@ -21,9 +19,7 @@ class Student < Person
   end
 
   def learn_stuff
-    response = ""
-    response += "WHOA! I've never thought of it quite like that before. "
-    response += "Now I feel like a genius!"
-    response
+    "WHOA! I've never thought of it quite like that before. " \
+      "Now I feel like a genius!"
   end
 end

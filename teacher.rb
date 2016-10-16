@@ -1,4 +1,6 @@
+require_relative 'person'
 class Teacher < Person
+  attr_reader :salary, :target_raise
 
   def set_phase(num)
     @phase = num
@@ -10,11 +12,20 @@ class Teacher < Person
     @salary = new_salary
   end
 
+  def set_performance_rating(rating)
+    response = ""
+    if rating > expected_rating
+      response = "Yay, I'm a great employee!"
+      receive_raise(@target_raise)
+    else
+      response += "Oh, well -- thanks to this actionable, specific, and kind "
+      response += "feedback, I'll do better next time."
+    end
+    response
+  end
+
   def receive_raise(raise)
     @salary += raise
   end
-
 end
-#Did not have time to add similarities within teach_stuff and set_performance_rating
-#Looking back, I should have made people a module and teacher
-#a parent class.
+
