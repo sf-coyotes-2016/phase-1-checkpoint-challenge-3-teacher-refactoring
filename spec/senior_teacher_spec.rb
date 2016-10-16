@@ -1,4 +1,4 @@
-require_relative '../senior_teacher'
+  require_relative '../senior_teacher'
 
 describe SeniorTeacher do
   let(:jan) { SeniorTeacher.new({name: "Jan", age: 35}) }
@@ -62,7 +62,7 @@ describe SeniorTeacher do
 
   describe "salary functionality" do
     before(:each) do
-      jan.salary = 1_000_000
+      jan.salary = 1000000
     end
 
     it "has a readable target raise of 1000" do
