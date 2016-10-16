@@ -1,5 +1,5 @@
-require_relative 'people'
-class Student < People
+require_relative 'person'
+class Student < Person
   attr_reader :age, :phase
   attr_accessor :name
 

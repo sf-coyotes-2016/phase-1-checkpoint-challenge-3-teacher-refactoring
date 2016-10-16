@@ -1,4 +1,4 @@
-module Teacher
+class Teacher < Person
 
   def set_phase(num)
     @phase = num

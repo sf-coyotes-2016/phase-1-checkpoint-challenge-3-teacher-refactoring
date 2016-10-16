@@ -1,6 +1,6 @@
-require_relative 'people'
+require_relative 'person'
 require_relative 'teacher'
-class ApprenticeTeacher < People
+class ApprenticeTeacher < Person
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 

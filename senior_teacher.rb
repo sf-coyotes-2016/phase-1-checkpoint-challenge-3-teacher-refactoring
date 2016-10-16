@@ -1,6 +1,6 @@
-require_relative 'people'
+require_relative 'person'
 require_relative 'teacher'
-class SeniorTeacher < People
+class SeniorTeacher < Person
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
