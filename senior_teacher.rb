@@ -1,22 +1,26 @@
-class SeniorTeacher
+# require_relative 'people_in_school'
+require_relative 'school_staff'
+
+class SeniorTeacher < Staff
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+  # attr_accessor :name
 
   def initialize(options={})
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 1000
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
+    @target_raise = 1000    
+    super
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
+  # end
 
   def teach_stuff
     response = ""
@@ -26,14 +30,14 @@ class SeniorTeacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
+  # def salary=(new_salary)
+  #   puts "This better be good!"
+  #   @salary = new_salary
+  # end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
+  # def receive_raise(raise)
+  #   @salary += raise
+  # end
 
   def set_performance_rating(rating)
     response = ""
