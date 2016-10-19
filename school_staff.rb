@@ -7,6 +7,14 @@ class Staff < PeopleInSchool
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
+  def teach_stuff
+    response = ""
+    response += self.class::RESPONSE2
+    response += self.class::RESPONSE3
+    response += self.class::RESPONSE4
+    response
+  end
+  
   def salary=(new_salary)
     puts "This better be good!"
     @salary = new_salary
@@ -14,14 +22,6 @@ class Staff < PeopleInSchool
 
   def receive_raise(raise)
     @salary += raise
-  end
-
-  def teach_stuff
-    response = ""
-    RESPONSE2 += "Listen, class, this is how everything works. "
-    RESPONSE3 += "*drops crazy knowledge bomb* "
-    RESPONSE4 += "... You're welcome."
-    response
   end
 
 end

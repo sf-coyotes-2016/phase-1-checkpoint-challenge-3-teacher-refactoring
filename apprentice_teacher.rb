@@ -3,9 +3,9 @@ require_relative 'school_staff'
 class ApprenticeTeacher < Staff
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
-  RESPONSE2 += "Listen, class, this is how everything works. "
-  RESPONSE3 += "*drops crazy knowledge bomb* "
-  RESPONSE4 += "... You're welcome."
+  RESPONSE2 = "Listen, class, this is how everything works. "
+  RESPONSE3 = "*drops crazy knowledge bomb* "
+  RESPONSE4 = "... You're welcome."
 
   def initialize(options={})
     # @age = options.fetch(:age, 0)
