@@ -14,7 +14,7 @@ class Staff < PeopleInSchool
     response += self.class::RESPONSE4
     response
   end
-  
+
   def salary=(new_salary)
     puts "This better be good!"
     @salary = new_salary
@@ -22,6 +22,18 @@ class Staff < PeopleInSchool
 
   def receive_raise(raise)
     @salary += raise
+  end
+
+    def set_performance_rating(rating)
+    response = ""
+    if rating > self.class::RATING
+      response = "Yay, I'm a great employee!"
+      receive_raise(@target_raise)
+    else
+      response += "Oh, well -- thanks to this actionable, specific, and kind "
+      response += "feedback, I'll do better next time."
+    end
+    response
   end
 
 end

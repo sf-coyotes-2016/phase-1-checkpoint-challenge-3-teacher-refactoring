@@ -6,6 +6,7 @@ class ApprenticeTeacher < Staff
   RESPONSE2 = "Listen, class, this is how everything works. "
   RESPONSE3 = "*drops crazy knowledge bomb* "
   RESPONSE4 = "... You're welcome."
+  RATING = 80
 
   def initialize(options={})
     # @age = options.fetch(:age, 0)
@@ -41,17 +42,17 @@ class ApprenticeTeacher < Staff
   #   @salary += raise
   # end
 
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 80
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
-  end
+  # def set_performance_rating(rating)
+  #   response = ""
+  #   if rating > 80
+  #     response = "Yay, I'm a great employee!"
+  #     receive_raise(@target_raise)
+  #   else
+  #     response += "Oh, well -- thanks to this actionable, specific, and kind "
+  #     response += "feedback, I'll do better next time."
+  #   end
+  #   response
+  # end
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"

@@ -7,6 +7,7 @@ class SeniorTeacher < Staff
   RESPONSE2 = "Listen, class, this is how everything works, fo SHO! "
   RESPONSE3 = "*drops flat-out insane knowledge bomb* "
   RESPONSE4 = "... You're welcome. *saunters away*"
+  RATING = 90
   
   def initialize(options={})
     @phase = 3
@@ -42,17 +43,17 @@ class SeniorTeacher < Staff
   #   @salary += raise
   # end
 
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 90
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
-  end
+  # def set_performance_rating(rating)
+  #   response = ""
+  #   if rating > 90
+  #     response = "Yay, I'm a great employee!"
+  #     receive_raise(@target_raise)
+  #   else
+  #     response += "Oh, well -- thanks to this actionable, specific, and kind "
+  #     response += "feedback, I'll do better next time."
+  #   end
+  #   response
+  # end
 
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
